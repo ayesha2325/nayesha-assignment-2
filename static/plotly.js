@@ -18,6 +18,7 @@ $(document).ready(function () {
             config.centroids = [];  // Reset manual centroids
             $('#instructions').show();  // Show instructions for manual selection
             alert('Click on the plot to manually select centroids.');
+            updatePlot();
         } else {
             manualSelectionMode = false;
             $('#instructions').hide();

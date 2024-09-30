@@ -58,7 +58,10 @@ def step_kmeans():
         return jsonify({'message': 'KMeans has converged!'})
     current_step += 1 if current_step < len(steps) else 0
     converged = current_step == len(steps)
-    return jsonify({'message': f'Step {current_step} completed.' if not converged else 'KMeans has converged!'})
+    if converged:
+        return jsonify({'message': 'KMeans has converged!'})
+    else:
+        return jsonify({'converged': converged})
 
 
 @app.route('/generate', methods=['POST'])
