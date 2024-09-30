@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive KMeans with Plotly</title>
+    <script src="https://cdn.plot.ly/plotly-2.9.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>KMeans Clustering Algorithm</h1>
+    <label for="clusters">Number of Clusters:</label>
+    <input type="number" id="clusters" value="3" min="1" max="10">
+    <label for="init-method">Initialization Method:</label>
+    <select id="init-method">
+        <option value="random">Random</option>
+        <option value="farthest">Farthest First</option>
+        <option value="kmeans++">KMeans++</option>
+        <option value="manual">Manual</option>
+    </select>
+    <button id="initialize">Initialize KMeans</button>
+    <button id="step-through">Step Through KMeans</button>
+    <button id="generate">Generate New Dataset</button>
+    <button id="reset">Reset Algorithm</button> <!-- New Reset Algorithm Button -->
+    <button id="run-to-convergence">Run to Convergence</button> <!-- New Run to Convergence Button -->
+    <div id="instructions" style="display:none;">Click on the plot to manually select centroids.</div>
+    <div id="plotly-div" style="width: 800px; height: 600px; margin-top: 20px;"></div>
+    <script src="{{ url_for('static', filename='plotly.js') }}"></script>
+</body>
+</html>

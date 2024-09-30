@@ -1,0 +1,36 @@
+/* static/style.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.controls {
+    margin: 20px 0;
+}
+
+.controls label {
+    margin-right: 10px;
+}
+
+.controls input, .controls select, .controls button {
+    margin: 0 10px;
+    padding: 5px 10px;
+}
+
+.plot-container {
+    margin-top: 20px;
+}
+
+#plot {
+    max-width: 100%;
+    border: 2px solid #ddd;
+}
